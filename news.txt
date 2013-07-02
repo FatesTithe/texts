@@ -3,3 +3,5 @@ Fate's Tithe
 
   See http://fort.chrysalis.me/
 
+& test
+okay
