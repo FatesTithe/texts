@@ -560,3 +560,12 @@ Setting views:
   by location and does not show DARK, UNFINDABLE, or those in UNFINDABLE
   locations.
 -----------------------------------------------------------------------------
+
+& rainy
+-----------------------------------------------------------------------------
+Rainy
+ 
+   SYNTAX: Rainy
+    
+	Rainy is the opposite of Sunny.
+-----------------------------------------------------------------------------
