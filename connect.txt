@@ -1,4 +1,5 @@
-Welcome to TinyMUX
+Welcome to Fate's Tithe.
+
 ------------------------------------------------------------------------------
   "connect <name> <password>" connects you to an existing character.
   "connect guest" connects you to a guest account if one is prepared.
