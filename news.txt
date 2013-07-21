@@ -3,7 +3,7 @@ Fate's Tithe
 
   See http://fort.chrysalis.me/
 
-Smith, transfers, rules, ftb, pregnancy, mine, channels, categories, censorship
+Smith, transfers, rules, ftb, pregnancy, mine, channels, gp, censorship
 
 & test
 okay
@@ -87,7 +87,7 @@ TMI: This is the anything goes channel. Flaming / attacks are no more allowed he
 
 Announce: You want to be on this channel; it's not a channel for discussion, but for the staff to make announcements on, be it requests for people to participate in a scene, for plot-things, and things along those lines. 
 
-& categories
+& gp
 The following are the growth categories for which a character can earn reduction points for their milestones; while there are more than two categories, and more than two may be submitted per week (to keep track of progression and make further requests on those lines easier) only two will be rewarded with reduced time. While long-term goal completion is part of this, you cannot fully justify a reward request with 'a month ago, my character learned this.' For that reason, it is sometimes a very good idea to submit more categories than you can actually earn for - you can then build on them in later requests. You are not required to send in any of these; if you don't want to, you just won't earn these points. The categories are as follows:
 
 Significant success
