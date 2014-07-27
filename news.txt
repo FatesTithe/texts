@@ -6,5 +6,5 @@ Fate's Tithe
 All news files are currently on the Wiki during the creation phase. 
 
 & test
-okay
+okay 2
 
