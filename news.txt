@@ -1,9 +1,8 @@
 & HELP
-Fate's Tithe
+Fate's Tithe (Pern): See http://fort.chrysalis.me/
+Lantern City: See http://water.chrysalis.me/wiki/Lantern_City
 
-  See http://fort.chrysalis.me/
-
-All news files are currently on the Wiki during the creation phase. 
+All news files are currently on the Wiki. 
 
 & test
 okay 2
