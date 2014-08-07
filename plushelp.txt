@@ -1,14 +1,303 @@
 & help
-------------------------------------------------------------------------------
-Index
+-------------------------------[ +Help Files ]--------------------------------
 
-  Index of helpfiles, V1.0 (1 AUG 00)
+                             --- IC Commands ---                              
+  +roll             +view	      
 
-  Beginner, bb
 
+                             --- OOC Commands ---                             
+  +beginner         +bg               +finger           +info            
+  +meetme           +selfboot         +staff            +uptime
+  +where            +who              ooc
+
+
+                               --- Systems ---                                
+  bb		    jobs	      places            
+           
+
+  
   To get help on any of the listed topics, type '+help <topic>'
+------------------------------------------------------------------------------
+
+& jobs
+------------------------------------------------------------------------------
+Jobs (player side)
+
+Syntax:   +myjobs
+          +myjob <#>
+          +myjob/add <#>=<comment>
+
+  These commands provide you with an interface to the Anomaly Jobs system, 
+	and allow you to see jobs that you created, or that are tagged for 
+	you. The +myjobs command shows a list of these jobs, along with 
+	various data about them. The second command allows you to read a job, 
+	and the third command will allow you to comment.
+
+------------------------------------------------------------------------------
+ 
+
+& places
+------------------------------------------------------------------------------
+
+PLACES
+
+  SYNTAX:  Mv from <#> to <#>          Moves a vacancy from one place to 
+					another.
+           Join <place name>           Puts you at <place name>
+           Join at #<num>              Puts you at place #<num>.
+           Join with <name>            Puts you at the place with <name>.
+           Depart                      Removes you from your place.
+           sit *                       Alias for Join.
+           Depart                      Removes you from your place.
+           Places                      Lists who's present at all places.
+           Place <num>                 Lists who's present at place <num>.
+           Plook                       Lists in column format everyone around 
+					the room.
+           Plook <num>                 Lists name of <num> and virtual desc.
+           tt <message>                Relays a message to all those at  
+					your place. This command takes the 
+					usual say/pose tokens, and 
+					TT |<message> will emit.
+           ttooc <message>             Relays an OOC message
+           Update <#>/<Option>=<text>  See '+help places-options'
+
+  PLACES are virtual places to sit, stand or occupy. You remain in the same
+  room, but join a group of people within that room who may or may not be
+  having a quiet conversation only with others placed with them.
+
+  For installation help, type '+help places-config'.
+
+  This code originally provided courtesy of Deirdre, Meg, and Osric of
+  AmberMUSH. It has since been editted by Angel@Heaven
+
 -----------------------------------------------------------------------------
 
+
+
+& where
+------------------------------------------------------------------------------
+Where
+
+  Syntax: +where
+
+  Similar to +who, this command shows a list of online players sorted by their 
+	location. If the location is JUMP_OK and you pass its tportlock, you 
+	will be shown its dbref. If a player or the room they are in is 
+	unfindable, you will not be able to see them, but they will be listed
+	in the "Unfindable" section at the end of the list. Staff will see all
+	players regardless, but unfindable players will have a * by their name.
+
+------------------------------------------------------------------------------
+
+& uptime
+------------------------------------------------------------------------------
+Up Time
+  
+Syntax: +uptime
+
+  This command displays basic runtime statistics for the game, such as boot 
+	time, current server time, and the game server's uptime.
+
+------------------------------------------------------------------------------
+
+
+& staff
+------------------------------------------------------------------------------
+Staff List
+
+  Syntax: +staff
+          +staff/all
+
+  This command shows a list of all connected, visible staff along with their 
+	status and idle time. The second form of the command lists all staff, 
+	regardless of connection status, with online staffers shown first.
+                                             
+------------------------------------------------------------------------------
+
+
+& selfboot
+------------------------------------------------------------------------------
+Selfboot
+
+Syntax: +selfboot
+
+  This command allows you to boot 'extra' connections that are sometimes left 
+	over as a result of losing your connection to the game.
+
+------------------------------------------------------------------------------
+
+& who
+------------------------------------------------------------------------------
+Plus Who
+
+Syntax: +who
+
+  This command displays a list of connected characters, their sex, alias, 
+	idle time, campaign, and location (if not unfindable). 
+
+------------------------------------------------------------------------------
+
+& ooc
+------------------------------------------------------------------------------
+Syntax: ooc <message>
+
+  This command will show an OOC message to everyone in your current room. This
+	is useful for communicating out of character when you are in an 
+	in-character area. Note that, just like a channel, you can use 
+	":" or ";" to pose or pose/nospace to OOC.
+
+------------------------------------------------------------------------------
+
+& meetme
+------------------------------------------------------------------------------
+Meetme
+
+	+meetme <name> sends an invitation to another player to meet you, who 
+	can either join your location or bring you to their location. The 
+	invitation expires when declined or in 2 minutes, whichever is sooner.
+
+------------------------------------------------------------------------------
+
+
+& info
+------------------------------------------------------------------------------
+Info
+
+Syntax:   +info
+          +info <player>
+          +info <player>/<section>
+
+  The info system allows you to add visible sections of your character's 
+	backstory that other players might know. The first command shows you 
+	your general info, and will list other info sections if you have them
+	set. The second form of the command allows you to see this information
+	for another player (or for yourself if you use 'me'). The third 
+	command will view this info, on yourself or another.
+
+  To set your general info, type &INFO-GENERAL me=<text>. You can set other 
+	info sections by typing &INFO-<name> me=<text>. Note that <name> should
+	have spaces replaced with underscores.
+
+------------------------------------------------------------------------------
+
+
+& finger-setup
+------------------------------------------------------------------------------
+Finger Setup
+
+The following finger categories are built-in. To set them, use 
+	&<field> me=<data>
+
+  FULLNAME....... Your character's full name.
+  AGE............ Your character's true age.
+  APP-AGE........ Your character's apparent age.
+  POSITION....... Your character's IC position.
+  FAME........... What your character is famous for.
+  RP-PREFS....... Your roleplay preferences.
+  ALTS........... The names of your other characters.
+  THEMESONG...... Your character's theme song.
+  QUOTE.......... A quote from your character, or that describes them.
+  HOURS.......... Your typical online hours.
+  TEMPERAMENT.... A brief synopsis of your character's personality.
+  VACATION....... Useful for letting others know if you'll be away.
+  URL............ Your character website, if applicable.
+  WIKI........... Your character wiki page, if applicable.
+  CAMPAIGN....... Which campaign your character object belongs to.
+
+  You can also set up custom finger attributes. If you want to set an attribute
+	called "More Detail" you could type &FINGER-MORE_DETAIL me=<data>, and 
+	it would show in your +finger. Note that field names longer than 11 
+	characters are truncated.
+
+------------------------------------------------------------------------------
+
+
+& finger
+------------------------------------------------------------------------------
+Finger
+
+  Syntax: +finger <name>
+
+  This command displays useful information about a player. You can also type
+	'+finger me' to see your own finger information. There are a variety 
+	of built-in finger fields, but there are also additional fields that 
+	you can customize yourself. 
+
+  For more information on setting up your +finger, see +help finger-setup.
+
+
+& bg
+------------------------------------------------------------------------------
+Backgrounds
+	 
+Syntax:   +bgadd <number>=<text>
+          +bgedit <number>=<old>/<new>
+          +bgclear <number>
+          +bglist
+          +bg <number>
+          +bgsubmit
+
+  This set of commands allows you to manage your character's background story.
+	The first command adds a new section. The second allows you to edit 
+	that section in the event of typos or changes. The third clears a 
+	section completely to allow you to retart it. The fourth gives a 
+	list of all your background sections, and the fifth allows you to 
+	read them.
+
+  The final command submits your background for approval and sets your 
+	character as waiting for approval. A job is created regarding your 
+	background, which will allow staff to communicate with you more easily 
+	in the event that changes are necessary. If this job is approved, 
+	our background is approved as well. You may want to familiarize 
+	yourself with the +myjobs commands to stay up to date with 
+	the status of your approval.
+
+------------------------------------------------------------------------------
+
+
+
+
+& roll
+------------------------------------------------------------------------------
+Roll
+
+  There are two ways to roll dice, here. In both, X is the number of dice, 
+	Y is the number of sides. 
+
+	+roll XdY : Reports the individual die roll results.
+	+roll/total XdY : Totals the number; accepts a single modifier, 
+		given as +Z or -Z
+
+	Syntax:
+		+roll 2d6
+		+roll/total 2d6
+		+roll/total 2d6-1
+		+roll/total 2d6+1
+
+------------------------------------------------------------------------------
+
+& view
+------------------------------------------------------------------------------
+View
+
+  Syntax: +view
+          +view <target>
+          +view <target>/<name>
+
+  Views are a way to expand the detail of a thing with data that might not 
+	necessarily fit well, or concisely, in its description. To see a list 
+	of all views in your current location, including players, objects, 
+	and exits, type +view. The second command shows only a list of those 
+	views on the target. The final command allows you to read those views. 
+	Note that you can use 'me' to refer to yourself and 'here' to refer to 
+	your location.
+
+  To set a view, simply type &VIEW-<name> <target>=Stuff. The name should have
+	spaces replaced with underscores (ie: &VIEW-EYE_COLOR me=Brown). 
+	You can only set views on things you control, such as yourself or 
+	objects you create.
+
+------------------------------------------------------------------------------
 
 & beginner
 ------------------------------------------------------------------------------
@@ -31,8 +320,7 @@ Beginner
     +staff                    Shows connected Staff.
     +staff/all                Shows the staff roster.
 
-  NOTE: You can always page a staffer
-  for help.
+  NOTE: You can always page a staffer for help.
 
 -----------------------------------------------------------------------------
 
@@ -235,3 +523,46 @@ The most recent version of this code, bug fixes, and patches can be found at:
      New Staff Command: +bbconfig. For setting global/group timeout values,
        anonymous boards, built-in timeout monitor.
 ==============================================================================
+
+& places-config
+------------------------------------------------------------------------------
+PLACES configuration:
+
+  SYNTAX: Configure <num> places
+          Unconfigure places
+
+  Notes: A null fixed message means vacancies can be moved freely to and from
+  the place.  This does not make sense for things like couches and rugs.  Set
+  it to something like "That makes no sense." if you are using such a place.
+
+  (O)Join and (O)depart messages take like this: %N. All Join and Depart
+  messages are appended with the place name.
+
+  Functions:  WHICHPLACE(<loc num>,<dbnum>) gives the number of a place where
+              <dbnum> is.
+              ATPLACE(<loc num>,<place num>) gives you a list of things at a
+              place.
+              PLACEINFO(<loc num>,<place num>,<option>) gives the value of
+              <option> at place.
+-----------------------------------------------------------------------------
+
+& places-options
+------------------------------------------------------------------------------
+PLACES configuration:
+
+  SYNTAX: Update <Place #>/<Option>=<Configuration Text>
+
+  Option Description    <Option>        Default Configuration Text
+  ------------------    --------        --------------------------
+  Place Name            NAME            Table x
+  Maximum # of places   MAXPLACES       Random
+  Current # of places   CURPLACES       Random (1 >= # >= MAXPLACES)
+  Fixed fail message    FIXED           <NULL>
+  Full fail message     FULL            That table has no more room.
+  Join message          JOIN            You sit down at <place>.
+  Ojoin message         OJOIN           sits down at <place>.
+  Depart message        DEPART          You stand and leave <place>.
+  Odepart message       ODEPART         stands and leaves <place>.
+  Say prefix            PREFIX          At your table
+  Description           DESCRIBE        A table with 4 legs and some chairs
+-----------------------------------------------------------------------------
