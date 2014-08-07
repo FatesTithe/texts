@@ -14,9 +14,92 @@
                                --- Systems ---                                
   bb		    jobs	      places            
            
-
-  
   To get help on any of the listed topics, type '+help <topic>'
+------------------------------------------------------------------------------
+
+& places-options
+------------------------------------------------------------------------------
+Place Options
+
+  For the most part the configuration options are pretty self-explanatory, but 
+here is a key:
+
+Name:      The name of the place. (ie: a side bedroom)
+Desc:      A description of the place.
+Curplaces: The number of spots at a place.
+Maxplaces: The maximum number of spots at the place.
+Fixed:     A failure message that blocks the 'mv' command.
+Full:      Shown when trying to move a vacancy to a full place.
+Join:      Displayed to a player joining a place.
+OJoin:     Displayed to others at a place when someone joins.
+Depart:    Displayed to a player leaving a place.
+ODepart:   Displayed to others at a place when someone leaves.
+Prefix:    Prepended to tt and spy output.
+Mutter:    The chance from 0-100 of a place being overheard. Requires an OOC 
+		note added to the desc of the room, if this is set.
+Spying:    0 means it can't be spied on. Spy functionality has been disabled.
+
+------------------------------------------------------------------------------
+
+& places-configure
+------------------------------------------------------------------------------
+Configuring Places
+ 
+Syntax:   +place/templates
+          +place/template <name>
+          +place/add <number>
+          +place/add <number>=<template>
+          +place/del <number>
+          place <number>
+          +place/set <number>/<option>=<value>
+
+  Place creation is actually quite simple, and starts with a system of global 
+templates to cut down on configuration. Use +place/templates to see a list, 
+and +place/template <name> to see the info for a template. +place/add <number> 
+adds <number> places to your room using the default template, but you can also 
+specify a template using =<template>. Adding more places does not delete places 
+you have already made. You can also delete a place by number, and the places 
+above it will be renumbered down. (ie: You delete place 3 in a room of 5 
+places. Place 4 becomes Place 3, and Place 5 becomes Place 4. No data is lost.) 
+When you control a room, the 'place' command will also show you configuration 
+data for the place in question, and you can set each option with the 
++place/set command.
+
+  Note that using "clear" as the value for an option will clear out that 
+option. This is useful for removing "Fixed" from a place, for example. For 
+more information on the different configuration options, please 
+see +help places/places-options.
+
+------------------------------------------------------------------------------
+
+& places
+------------------------------------------------------------------------------
+Using Places
+
+  Syntax: places
+          place <number>
+          join <number, name, or player>
+          depart
+          mv from <number> to <number>
+          tt <message>
+          tt/ooc <message>
+
+  Places are virtual locations in a room that are used to expand its sense of 
+	space without creating more rooms. You remain in the same room, but 
+	join a group of people (perhaps at a table, or in a secluded corner) 
+	and may have a quiet conversation with only those in the same place.
+
+  Respectively, the commands list all places, get information on a specific 
+	place, leave your current place, move a vacancy from one place to 
+	another, send a message (tabletalk) to those at your location, and 
+	send an ooc message to those at your location. You may use :, ;, ", 
+	and | with the tt commands to pose, pose/nospace, say, and emit. 
+
+  Places spying functionality has been disabled; the commands do not exist.
+
+  For information on configuring places, see +help places-config. 
+  To see just a list of options, see +help places-options.
+
 ------------------------------------------------------------------------------
 
 & jobs
@@ -35,45 +118,6 @@ Syntax:   +myjobs
 
 ------------------------------------------------------------------------------
  
-
-& places
-------------------------------------------------------------------------------
-
-PLACES
-
-  SYNTAX:  Mv from <#> to <#>          Moves a vacancy from one place to 
-					another.
-           Join <place name>           Puts you at <place name>
-           Join at #<num>              Puts you at place #<num>.
-           Join with <name>            Puts you at the place with <name>.
-           Depart                      Removes you from your place.
-           sit *                       Alias for Join.
-           Depart                      Removes you from your place.
-           Places                      Lists who's present at all places.
-           Place <num>                 Lists who's present at place <num>.
-           Plook                       Lists in column format everyone around 
-					the room.
-           Plook <num>                 Lists name of <num> and virtual desc.
-           tt <message>                Relays a message to all those at  
-					your place. This command takes the 
-					usual say/pose tokens, and 
-					TT |<message> will emit.
-           ttooc <message>             Relays an OOC message
-           Update <#>/<Option>=<text>  See '+help places-options'
-
-  PLACES are virtual places to sit, stand or occupy. You remain in the same
-  room, but join a group of people within that room who may or may not be
-  having a quiet conversation only with others placed with them.
-
-  For installation help, type '+help places-config'.
-
-  This code originally provided courtesy of Deirdre, Meg, and Osric of
-  AmberMUSH. It has since been editted by Angel@Heaven
-
------------------------------------------------------------------------------
-
-
-
 & where
 ------------------------------------------------------------------------------
 Where
@@ -523,46 +567,3 @@ The most recent version of this code, bug fixes, and patches can be found at:
      New Staff Command: +bbconfig. For setting global/group timeout values,
        anonymous boards, built-in timeout monitor.
 ==============================================================================
-
-& places-config
-------------------------------------------------------------------------------
-PLACES configuration:
-
-  SYNTAX: Configure <num> places
-          Unconfigure places
-
-  Notes: A null fixed message means vacancies can be moved freely to and from
-  the place.  This does not make sense for things like couches and rugs.  Set
-  it to something like "That makes no sense." if you are using such a place.
-
-  (O)Join and (O)depart messages take like this: %N. All Join and Depart
-  messages are appended with the place name.
-
-  Functions:  WHICHPLACE(<loc num>,<dbnum>) gives the number of a place where
-              <dbnum> is.
-              ATPLACE(<loc num>,<place num>) gives you a list of things at a
-              place.
-              PLACEINFO(<loc num>,<place num>,<option>) gives the value of
-              <option> at place.
------------------------------------------------------------------------------
-
-& places-options
-------------------------------------------------------------------------------
-PLACES configuration:
-
-  SYNTAX: Update <Place #>/<Option>=<Configuration Text>
-
-  Option Description    <Option>        Default Configuration Text
-  ------------------    --------        --------------------------
-  Place Name            NAME            Table x
-  Maximum # of places   MAXPLACES       Random
-  Current # of places   CURPLACES       Random (1 >= # >= MAXPLACES)
-  Fixed fail message    FIXED           <NULL>
-  Full fail message     FULL            That table has no more room.
-  Join message          JOIN            You sit down at <place>.
-  Ojoin message         OJOIN           sits down at <place>.
-  Depart message        DEPART          You stand and leave <place>.
-  Odepart message       ODEPART         stands and leaves <place>.
-  Say prefix            PREFIX          At your table
-  Description           DESCRIBE        A table with 4 legs and some chairs
------------------------------------------------------------------------------
