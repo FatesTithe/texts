@@ -12,10 +12,41 @@
 
 
                                --- Systems ---                                
-  bb		    jobs	      places            
+  bb		    jobs	      places       
+
+                               --- Amber ---                             
+  +profile 
+     
            
   To get help on any of the listed topics, type '+help <topic>'
 ------------------------------------------------------------------------------
+
+& profile
+------------------------------------------------------------------------------
+Profile
+
+  Profile shows information specific to the Amber campaign. To set the various
+fields, use the following attributes (&example me=Blah):
+
+App-age - Apparent age
+Mother 
+Father
+Order - Birth Order
+Yob - Birth Year
+Legitimate - Whether or not you're legitimate 
+Titles - Any titles you may hold in Amber
+Colors - Your personal colors
+Symbol - Your personal symbol
+Allies - Your known allies
+Enemies - Your known enemies
+Amberite - Information other Amberites would know
+Shadow-rep - Your reputation in Shadow, in general
+Shadow - Information on your home shadow if the others tend to know about it
+
+Anything else would be set by &profile-(whatever) me=Blah.
+
+------------------------------------------------------------------------------
+
 
 & places-options
 ------------------------------------------------------------------------------
