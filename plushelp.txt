@@ -28,7 +28,6 @@ Profile
   Profile shows information specific to the Amber campaign. To set the various
 fields, use the following attributes (&example me=Blah):
 
-App-age - Apparent age
 Mother 
 Father
 Order - Birth Order
