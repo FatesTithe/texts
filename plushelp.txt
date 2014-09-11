@@ -8,11 +8,11 @@
                              --- OOC Commands ---                             
   +beginner         +bg               +finger           +info            
   +meetme           +selfboot         +staff            +uptime
-  +where            +who              ooc
+  +where            +who              ooc               
 
 
                                --- Systems ---                                
-  bb		    jobs	      places       
+  bb		    jobs	      places            Events      
 
                                --- Amber ---                             
   +profile 
