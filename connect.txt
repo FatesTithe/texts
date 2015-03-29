@@ -1,12 +1,14 @@
-Welcome to Fate's Tithe.
+Welcome to what was Fate's Tithe
 
 ------------------------------------------------------------------------------
   "connect <name> <password>" connects you to an existing character.
-  "connect guest" connects you to a guest account if one is prepared.
   "create <name> <password>" creates a new character.
 
   "WHO" tells you who is logged in to the game (case sensitive).
   "QUIT" exits the game and saves your character.
+
+  Guest are disabled, as this is a social site. Please create a character bit
+  as directed above. 	
 
   Once logged on, "help" gives help on specific commands, functions, and
   special topics.  Other 'help' commands include "+help" and "news".
